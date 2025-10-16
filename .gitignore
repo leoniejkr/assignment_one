@@ -1,0 +1,8 @@
+
+
+# auto-generated file
+__pycache__/
+*.pyc
+entities/__pycache__/
+entities/*.pyc
+entities/__pycache__/
