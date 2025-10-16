@@ -2,8 +2,8 @@ import numpy as np
 from entities.warehouse import Warehouse
 from entities.order import Order
 
-
-# to check if the file is read correctly
+# -----------------------------------------------------------
+# input file parsing
 def load_input(filename):
     with open(filename, 'r') as f:
         data = [line.strip() for line in f.readlines() if line.strip() != ""]
@@ -45,3 +45,44 @@ if __name__ == "__main__":
     print("\nOrders:")
     for i, o in enumerate(data["orders"]):
         print(f"  Order {i}: Deliver to ({o.row},{o.col}), Items={o.items}")
+
+
+
+
+# -----------------------------------------------------------
+# Output submission file generation
+
+def generate_commands_from_trips(drone_trips):
+    """
+    Convert simulated drone_trips into valid Hash Code output commands.
+    Each trip in drone_trips[d_id] is a dict with:
+      - order_id
+      - warehouse_id
+      - pack: Counter({product_type: qty})
+    Returns: list of strings (commands)
+    """
+    commands = []
+    for d_id, trips in enumerate(drone_trips):
+        for trip in trips:
+            wid = trip["warehouse_id"]
+            oid = trip["order_id"]
+            pack = trip["pack"]
+            # 1) LOAD commands (for each product type)
+            for pid, qty in pack.items():
+                commands.append(f"{d_id} L {wid} {pid} {qty}")
+            # 2) DELIVER commands (for each product type)
+            for pid, qty in pack.items():
+                commands.append(f"{d_id} D {oid} {pid} {qty}")
+    return commands
+
+
+def write_submission(drone_trips, filename="submission.out"):
+    """
+    Generate output file following the required Hash Code 2016 format.
+    """
+    commands = generate_commands_from_trips(drone_trips)
+    with open(filename, "w") as f:
+        f.write(f"{len(commands)}\n")
+        for cmd in commands:
+            f.write(cmd + "\n")
+    print(f"Submission file '{filename}' written with {len(commands)} commands.")
