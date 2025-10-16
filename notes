@@ -1,0 +1,88 @@
+task: find quickest schedule
+
+problem descr: using drones to deliver customer orders from warehouses in a 2D grid
+- drones: max weight, start at warehouse 0
+- warehouse: location, inventory of products
+- customer order: location, list of products
+--> goal: schedule drone actions to minimize time to deliver all orders
+
+
+
+entities:
+- map + coordinates: 2D grid /w euclidean distance
+
+- products: 
+  - multiple product types, 
+  - a product type has a fixed weight
+
+- warehouses:
+  - location (x,y)
+  - inventory of products (by type and quantity)
+    - eg: [5, 1, 0, 3] means 5 of product type 0, 1 of type 1, none of type 2, 3 of type 3
+
+- orders:
+  - delivery location (x,y)
+  - list of items (by type and quantity)
+    - eg: [0, 2, 1, 0] means 2  items of type 1, 1 of type 2, none of type 0 or 3
+
+- drones:
+  - id: 
+    (start)-location: (0, 0)
+    max_weight: 
+  - commands:
+    - load     d+1 turns
+    - deliver  d+1 turns
+    - wait     w turns
+    - unload   d+1 turns
+  - travel time: ceil(euclidean distance) rounded up to next int 
+  - action time: 1 turn per load, deliver or unload action
+    - eg: distance 2.3 & load --> travel time 3 turns + 1 turn to load = 4 turns total
+
+- simulation:
+  - runs for T turns (0 to T-1)
+  - drones execute commands chronologically
+  - case: multiple commands in same warehouse --> unload before load
+  - orders earn points based on how quickly they are fulfilled
+    - points =  (T - turn order completed) / T * 100 
+
+
+file format: 
+  1st section: simulation parameters
+  - no of rows in grid
+  - no of columns in grid
+  - no of drones
+  - no of turns 
+  - max weight a drone can carry
+  2nd section: product availability
+  - no of product types
+  - weights of each product type
+  3rd section: warehouse info
+  - no of warehouses
+  - for each warehouse:
+    - location (row, col)
+    - inventory of products (by type and quantity)
+  4th section: customer orders
+  - no of orders
+  - for each order:
+    - delivery location (row, col)
+    - no of items
+    - list of items (by type and quantity)
+
+
+
+--> output file:
+- integer Q: no of commands
+  - for each command:
+    - drone id
+    - command type (L, D, W, U)
+    - parameters (warehouse id, order id, product type id, quantity)
+
+# notes
+  # - load: L --> params: warehouse id, product type id, quantity
+  # - deliver: D --> params: customer id, product type id, quantity
+  # - wait: W --> params: wait time
+  # - unload: U --> params: warehouse id, product type id, quantity
+
+  # fly to warehouse/customer location and deliver/load/unload x items of product type y
+
+
