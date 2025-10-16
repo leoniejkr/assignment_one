@@ -1,0 +1,7 @@
+
+
+ 
+- merge code with structure
+- add optimizer
+  - hill-climing, tabu search, simulated annealing, genetic algorithms
+- add commands to output
