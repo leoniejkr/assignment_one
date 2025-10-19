@@ -74,8 +74,8 @@ def simulate_and_score(drone_trips, data):
         order_scores.append(score)
         total_score += score
 
-    print("\n Simulation Summary:")
-    print(f"  Total score: {total_score}")
-    print(f"  Completed orders: {sum(1 for s in order_scores if s>0)} / {len(orders)}")
+    # print("\n Simulation Summary:")
+    # print(f"  Total score: {total_score}")
+    # print(f"  Completed orders: {sum(1 for s in order_scores if s>0)} / {len(orders)}")
 
     return total_score, order_scores

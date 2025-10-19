@@ -6,3 +6,9 @@ __pycache__/
 entities/__pycache__/
 entities/*.pyc
 entities/__pycache__/
+
+
+project/__pycache__/
+project/*.pyc
+project/__pycache__/
+project/results/

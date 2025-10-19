@@ -100,7 +100,7 @@ def build_greedy_trips(assignments, data):
 
 
 if __name__ == "__main__":
-    from file_handling import load_input
+    from project.file_handling import load_input
     data = load_input("data/input/busy_day.in")
 
     # Step 1: build initial greedy solution
