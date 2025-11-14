@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 from result_types import ExperimentResult
 from configs import define_experiments
-from greedy import build_greedy_trips, find_warehouse_plan_for_order
+from greedy_improved import build_greedy_trips, find_warehouse_plan_for_order
 from greedy_improved import spatial_clustering_assignment, priority_based_assignment
 from file_handling import write_submission
 

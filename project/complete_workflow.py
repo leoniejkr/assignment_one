@@ -90,7 +90,7 @@ def main():
     print("[STEP 4] Running COMPREHENSIVE ANALYSIS")
     print("="*80)
     
-    from comprehensive_analysis import ComprehensiveAnalyzer
+    from analysis_stuff.comprehensive_analysis import ComprehensiveAnalyzer
     
     analyzer = ComprehensiveAnalyzer("project/results")
     analyzer.run_full_analysis()

@@ -1,7 +1,7 @@
 import random
 import time
 from typing import List
-from greedy import build_greedy_trips, find_warehouse_plan_for_order
+from greedy_improved import build_greedy_trips, find_warehouse_plan_for_order
 from util import simulate_and_score
 
 class BaseOptimizer:
