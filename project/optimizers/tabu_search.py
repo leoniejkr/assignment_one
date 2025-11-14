@@ -7,11 +7,13 @@ from optimizers.base_optimizer import BaseOptimizer
 class TabuSearch(BaseOptimizer):
     """Tabu Search algorithm"""
     
-    def __init__(self, data, tabu_tenure=20, max_iterations=1000, time_limit=60):
+    def __init__(self, data, tabu_tenure=20, max_iterations=1000, 
+                 time_limit=60, neighborhood_size=50):
         super().__init__(data, time_limit)
         self.tabu_tenure = tabu_tenure
         self.max_iterations = max_iterations
         self.tabu_list = deque(maxlen=tabu_tenure)
+        self.neighborhood_size = neighborhood_size
     
     def solution_hash(self, solution: List[int]) -> str:
         """Create hash of solution for tabu list"""
@@ -40,7 +42,7 @@ class TabuSearch(BaseOptimizer):
             
             # Generate neighbors
             neighbors = []
-            for _ in range(50):  # Generate 50 random neighbors
+            for _ in range(self.neighborhood_size):  # Generate neighbors
                 neighbor = self.mutate(current)
                 neighbors.append(neighbor)
             
