@@ -7,11 +7,12 @@ from util import simulate_and_score
 class BaseOptimizer:
     """Base class for all optimization algorithms with evaluation tracking."""
     
-    def __init__(self, data, time_limit=60):
+    def __init__(self, data, time_limit=60, use_greedy_init=True):
         self.data = data
         self.time_limit = time_limit
         self.num_orders = len(data["orders"])
         self.num_drones = data["num_drones"]
+        self.use_greedy_init = use_greedy_init  # NEW: option to use greedy initialization
         
         # Track best solution
         self.best_solution = None
@@ -31,6 +32,34 @@ class BaseOptimizer:
         """Generate random initial solution."""
         return [random.randint(0, self.num_drones - 1) 
                 for _ in range(self.num_orders)]
+    
+    def greedy_solution(self) -> List[int]:
+        """
+        Generate greedy initial solution using priority-based assignment.
+        This gives metaheuristics a good starting point.
+        """
+        try:
+            from greedy_improved import priority_based_assignment
+            
+            # Get greedy assignments
+            assignments = priority_based_assignment(self.data)
+            
+            # Extract drone assignments
+            solution = [a["drone"] for a in assignments]
+            return solution
+            
+        except ImportError:
+            print("⚠️ Greedy initialization not available, using random")
+            return self.random_solution()
+    
+    def get_initial_solution(self) -> List[int]:
+        """
+        Get initial solution: greedy if enabled, random otherwise.
+        """
+        if self.use_greedy_init:
+            return self.greedy_solution()
+        else:
+            return self.random_solution()
     
     def evaluate(self, solution: List[int]) -> int:
         """

@@ -8,8 +8,8 @@ class TabuSearch(BaseOptimizer):
     """Tabu Search algorithm"""
     
     def __init__(self, data, tabu_tenure=20, max_iterations=1000, 
-                 time_limit=60, neighborhood_size=50):
-        super().__init__(data, time_limit)
+                 time_limit=60, neighborhood_size=50, use_greedy_init=True):
+        super().__init__(data, time_limit, use_greedy_init)
         self.tabu_tenure = tabu_tenure
         self.max_iterations = max_iterations
         self.tabu_list = deque(maxlen=tabu_tenure)
@@ -27,8 +27,13 @@ class TabuSearch(BaseOptimizer):
         
         start_time = time.time()
         
-        # Initial solution
-        current = self.random_solution()
+        # Or use a greedy initial solution
+        if self.use_greedy_init:
+            print("  Using greedy initial solution")
+            current = self.get_initial_solution()
+        else:
+            current = self.random_solution()
+
         current_score = self.evaluate(current)
         
         self.best_solution = current.copy()

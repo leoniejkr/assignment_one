@@ -7,8 +7,8 @@ class SimulatedAnnealing(BaseOptimizer):
     """Simulated Annealing algorithm"""
     
     def __init__(self, data, initial_temp=10000, cooling_rate=0.95, 
-                 iterations_per_temp=100, min_temp=1, time_limit=60):
-        super().__init__(data, time_limit)
+                 iterations_per_temp=100, min_temp=1, time_limit=60, use_greedy_init=True):
+        super().__init__(data, time_limit, use_greedy_init)
         self.initial_temp = initial_temp
         self.cooling_rate = cooling_rate
         self.iterations_per_temp = iterations_per_temp
@@ -23,8 +23,13 @@ class SimulatedAnnealing(BaseOptimizer):
         
         start_time = time.time()
         
-        # Initial solution
-        current = self.random_solution()
+        # Or use a greedy initial solution
+        if self.use_greedy_init:
+            print("  Using greedy initial solution")
+            current = self.get_initial_solution()
+        else:
+            current = self.random_solution()
+
         current_score = self.evaluate(current)
         
         self.best_solution = current.copy()

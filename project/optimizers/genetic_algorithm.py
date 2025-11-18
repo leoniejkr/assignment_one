@@ -8,8 +8,8 @@ class GeneticAlgorithm(BaseOptimizer):
     """Genetic Algorithm using DEAP library"""
     
     def __init__(self, data, population_size=100, generations=50, 
-                 mutation_rate=0.2, crossover_rate=0.8, time_limit=60):
-        super().__init__(data, time_limit)
+                 mutation_rate=0.2, crossover_rate=0.8, time_limit=60, use_greedy_init=True):
+        super().__init__(data, time_limit, use_greedy_init)
         self.population_size = population_size
         self.generations = generations
         self.mutation_rate = mutation_rate
@@ -52,8 +52,18 @@ class GeneticAlgorithm(BaseOptimizer):
                            low=0, up=self.num_drones - 1, indpb=0.1)
             toolbox.register("select", tools.selTournament, tournsize=3)
             
-            # Create population
+            # # Create population
+            # pop = toolbox.population(n=self.population_size)
+
+            # Create population (seed with greedy if enabled)
             pop = toolbox.population(n=self.population_size)
+
+            if self.use_greedy_init:
+                # Replace first individual with greedy solution
+                greedy_solution = self.get_initial_solution()
+                pop[0] = creator.Individual(greedy_solution)
+                print(f"  Seeded population with greedy solution")
+
             hof = tools.HallOfFame(1)
             
             stats = tools.Statistics(lambda ind: ind.fitness.values)

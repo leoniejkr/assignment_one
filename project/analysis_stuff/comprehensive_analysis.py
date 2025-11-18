@@ -104,24 +104,32 @@ class ComprehensiveAnalyzer:
             
             if not greedy_scores.empty:
                 best_greedy = greedy_scores["Mean"].max()
-                print(f"\nBest Greedy Score: {best_greedy:.2f}")
+                best_greedy_name = greedy_scores["Mean"].idxmax()
+                print(f"\nBest Greedy: {best_greedy_name} = {best_greedy:.2f}")
                 
                 if not meta_scores.empty:
                     best_meta = meta_scores["Mean"].max()
+                    best_meta_name = meta_scores["Mean"].idxmax()
                     worst_meta = meta_scores["Mean"].min()
+                    worst_meta_name = meta_scores["Mean"].idxmin()
                     
-                    print(f"Best Metaheuristic Score: {best_meta:.2f}")
-                    print(f"Worst Metaheuristic Score: {worst_meta:.2f}")
+                    print(f"Best Metaheuristic: {best_meta_name} = {best_meta:.2f}")
+                    print(f"Worst Metaheuristic: {worst_meta_name} = {worst_meta:.2f}")
                     
                     improvement_best = ((best_meta - best_greedy) / best_greedy) * 100
                     improvement_worst = ((worst_meta - best_greedy) / best_greedy) * 100
                     
-                    print(f"\nImprovement over greedy:")
+                    print(f"\nImprovement over best greedy:")
                     print(f"  Best metaheuristic: {improvement_best:+.2f}%")
                     print(f"  Worst metaheuristic: {improvement_worst:+.2f}%")
                     
                     if improvement_worst < 0:
-                        print(f"  ⚠️ Warning: Some metaheuristics perform worse than greedy!")
+                        print(f"\n  ⚠️ WARNING: {worst_meta_name} performs WORSE than greedy!")
+                        print(f"     Likely causes:")
+                        print(f"     1. Algorithm hasn't converged (increase iterations/time)")
+                        print(f"     2. Poor parameter tuning")
+                        print(f"     3. Weak initial solution")
+                        print(f"     → Check convergence curves to diagnose")
                     elif improvement_best < 5:
                         print(f"  ⚠️ Note: Modest improvement (<5%) - complexity may not be justified")
                     else:
@@ -160,16 +168,6 @@ class ComprehensiveAnalyzer:
         
         print("\nEfficiency Metrics:")
         print(efficiency_summary)
-        
-        # Compare greedy vs meta efficiency
-        if self.greedy_algos and self.meta_algos:
-            print("\n" + "-"*70)
-            greedy_eff = self.df[self.df["algorithm"].isin(self.greedy_algos)]["score_per_sec"].mean()
-            meta_eff = self.df[self.df["algorithm"].isin(self.meta_algos)]["score_per_sec"].mean()
-            
-            print(f"Average efficiency:")
-            print(f"  Greedy: {greedy_eff:.2f} score/sec")
-            print(f"  Metaheuristics: {meta_eff:.2f} score/sec")
         
         efficiency_summary.to_csv(self.dir / "efficiency_metrics.csv")
         print(f"\n✓ Saved to efficiency_metrics.csv")
@@ -281,61 +279,75 @@ class ComprehensiveAnalyzer:
     # ============= VISUALIZATIONS =============
     
     def plot_score_distribution(self):
-        """Box plot with individual points overlay, highlighting greedy baselines."""
+        """Box plot with ALL algorithms including greedy."""
         fig, ax = plt.subplots(figsize=(14, 7))
         
-        # Determine colors: greedy in different palette
-        palette = []
-        for algo in sorted(self.df["algorithm"].unique()):
-            if algo in self.greedy_algos:
-                palette.append("#FF6B6B")  # Red for greedy
-            else:
-                palette.append("#4ECDC4")  # Teal for metaheuristics
+        # Sort: greedy first, then meta by mean score
+        greedy_sorted = sorted([a for a in self.df["algorithm"].unique() if a in self.greedy_algos])
+        meta_means = self.df[self.df["algorithm"].isin(self.meta_algos)].groupby("algorithm")["score"].mean()
+        meta_sorted = meta_means.sort_values(ascending=False).index.tolist()
+        algo_order = greedy_sorted + meta_sorted
         
-        # Box plot
+        # Colors
+        palette = ['#FF6B6B' if a in self.greedy_algos else '#4ECDC4' for a in algo_order]
+        
         sns.boxplot(data=self.df, x="algorithm", y="score", ax=ax, 
-                   palette=palette, order=sorted(self.df["algorithm"].unique()))
+                   palette=palette, order=algo_order)
         
-        # Overlay individual points
         sns.stripplot(data=self.df, x="algorithm", y="score", ax=ax, 
-                     color="black", alpha=0.3, size=4,
-                     order=sorted(self.df["algorithm"].unique()))
+                     color="black", alpha=0.3, size=4, order=algo_order)
         
-        ax.set_title("Score Distribution by Algorithm (Red = Greedy Baselines)", 
+        ax.set_title("Score Distribution: All Algorithms (Red=Greedy, Teal=Metaheuristics)", 
                     fontsize=14, fontweight="bold")
         ax.set_xlabel("Algorithm", fontsize=12)
         ax.set_ylabel("Score", fontsize=12)
         ax.tick_params(axis='x', rotation=45)
         ax.grid(axis='y', alpha=0.3)
         
-        # Add legend
         from matplotlib.patches import Patch
         legend_elements = [
-            Patch(facecolor='#4ECDC4', label='Metaheuristics'),
-            Patch(facecolor='#FF6B6B', label='Greedy Baselines')
+            Patch(facecolor='#FF6B6B', label='Greedy Baselines'),
+            Patch(facecolor='#4ECDC4', label='Metaheuristics')
         ]
-        ax.legend(handles=legend_elements, loc='upper right')
+        ax.legend(handles=legend_elements, loc='lower right')
         
         plt.tight_layout()
-        plt.savefig(self.plots_dir / "score_distribution.png", dpi=300)
+        plt.savefig(self.plots_dir / "score_distribution_all.png", dpi=300)
         plt.close()
-        print("✓ Saved score_distribution.png")
+        print("✓ Saved score_distribution_all.png")
+        
+        # Also create metaheuristics-only version (original style)
+        if self.meta_algos:
+            fig, ax = plt.subplots(figsize=(12, 6))
+            meta_df = self.df[self.df["algorithm"].isin(self.meta_algos)]
+            
+            sns.boxplot(data=meta_df, x="algorithm", y="score", ax=ax, palette="Set2")
+            sns.stripplot(data=meta_df, x="algorithm", y="score", ax=ax, 
+                         color="black", alpha=0.3, size=4)
+            
+            ax.set_title("Score Distribution by Metaheuristic Algorithm", fontsize=14, fontweight="bold")
+            ax.set_xlabel("Algorithm", fontsize=12)
+            ax.set_ylabel("Score", fontsize=12)
+            ax.tick_params(axis='x', rotation=45)
+            ax.grid(axis='y', alpha=0.3)
+            
+            plt.tight_layout()
+            plt.savefig(self.plots_dir / "boxplot_comparison.png", dpi=300)
+            plt.close()
+            print("✓ Saved boxplot_comparison.png (metaheuristics only)")
     
     def plot_performance_comparison(self):
-        """Bar chart with error bars, highlighting greedy baseline."""
+        """Bar chart with ALL algorithms."""
         fig, ax = plt.subplots(figsize=(14, 7))
         
         summary = self.df.groupby("algorithm")["score"].agg(["mean", "std"]).sort_values("mean", ascending=False)
         
-        # Color bars: greedy vs meta
         colors = ['#FF6B6B' if algo in self.greedy_algos else '#4ECDC4' 
                  for algo in summary.index]
         
         bars = ax.bar(range(len(summary)), summary["mean"], 
-                     yerr=summary["std"], capsize=5, alpha=0.7, 
-                     color=colors)
+                     yerr=summary["std"], capsize=5, alpha=0.7, color=colors)
         
-        # Add value labels on bars
         for i, (bar, mean_val) in enumerate(zip(bars, summary["mean"])):
             height = bar.get_height() + summary["std"].iloc[i] + (summary["mean"].max() * 0.01)
             ax.text(bar.get_x() + bar.get_width()/2, height,
@@ -347,7 +359,6 @@ class ComprehensiveAnalyzer:
         ax.set_title("Algorithm Performance Comparison (Mean ± Std)", fontsize=14, fontweight="bold")
         ax.grid(axis='y', alpha=0.3)
         
-        # Add legend
         from matplotlib.patches import Patch
         legend_elements = [
             Patch(facecolor='#4ECDC4', alpha=0.7, label='Metaheuristics'),
@@ -355,19 +366,75 @@ class ComprehensiveAnalyzer:
         ]
         ax.legend(handles=legend_elements, loc='upper right')
         
-        # Draw reference line for best greedy
         if self.greedy_algos:
-            best_greedy_score = summary.loc[[a for a in summary.index if a in self.greedy_algos]]["mean"].max()
-            ax.axhline(y=best_greedy_score, color='red', linestyle='--', alpha=0.5, 
-                      label=f'Best Greedy: {best_greedy_score:.0f}')
+            best_greedy = summary.loc[[a for a in summary.index if a in self.greedy_algos]]["mean"].max()
+            ax.axhline(y=best_greedy, color='red', linestyle='--', alpha=0.5, linewidth=2,
+                      label=f'Best Greedy: {best_greedy:.0f}')
         
         plt.tight_layout()
         plt.savefig(self.plots_dir / "performance_comparison.png", dpi=300)
         plt.close()
         print("✓ Saved performance_comparison.png")
+        
+        # Also create average performance (metaheuristics only, original style)
+        if self.meta_algos:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            meta_summary = summary.loc[[a for a in summary.index if a in self.meta_algos]]
+            
+            plt.bar(range(len(meta_summary)), meta_summary["mean"], 
+                   yerr=meta_summary["std"], capsize=5, alpha=0.7)
+            plt.xticks(range(len(meta_summary)), meta_summary.index, rotation=45)
+            plt.ylabel("Average Score")
+            plt.title("Average Performance by Algorithm")
+            plt.grid(True, axis='y', alpha=0.3)
+            plt.tight_layout()
+            plt.savefig(self.plots_dir / "average_performance.png", dpi=300)
+            plt.close()
+            print("✓ Saved average_performance.png (metaheuristics only)")
+    
+    def plot_runtime_vs_score(self):
+        """Scatter plot including greedy."""
+        fig, ax = plt.subplots(figsize=(10, 6))
+        
+        for algo in self.df["algorithm"].unique():
+            algo_df = self.df[self.df["algorithm"] == algo]
+            color = '#FF6B6B' if algo in self.greedy_algos else None
+            ax.scatter(algo_df["runtime"], algo_df["score"], label=algo, alpha=0.6, s=100, color=color)
+        
+        ax.set_xlabel("Runtime (s)")
+        ax.set_ylabel("Score")
+        ax.set_title("Score vs Runtime")
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(self.plots_dir / "runtime_vs_score.png", dpi=300)
+        plt.close()
+        print("✓ Saved runtime_vs_score.png")
+    
+    def plot_efficiency(self):
+        """Efficiency bar plot with ALL algorithms."""
+        if "score_per_sec" not in self.df.columns:
+            self.df["score_per_sec"] = self.df["score"] / self.df["runtime"]
+        
+        fig, ax = plt.subplots(figsize=(12, 6))
+        
+        # Sort order
+        algo_order = sorted(self.greedy_algos) + sorted(self.meta_algos)
+        colors = ['#FF6B6B' if a in self.greedy_algos else '#4ECDC4' for a in algo_order]
+        
+        plot_df = self.df[self.df["algorithm"].isin(algo_order)]
+        
+        sns.barplot(data=plot_df, x="algorithm", y="score_per_sec", 
+                   order=algo_order, palette=colors, ax=ax)
+        ax.set_title("Efficiency (Score per Second)")
+        ax.tick_params(axis='x', rotation=45)
+        plt.tight_layout()
+        plt.savefig(self.plots_dir / "efficiency_barplot.png", dpi=300)
+        plt.close()
+        print("✓ Saved efficiency_barplot.png")
     
     def plot_runtime_analysis(self):
-        """Multiple subplots for runtime analysis."""
+        """4-panel runtime analysis."""
         fig, axes = plt.subplots(2, 2, figsize=(15, 12))
         
         # 1. Runtime distribution
@@ -377,7 +444,7 @@ class ComprehensiveAnalyzer:
         axes[0, 0].set_ylabel("Runtime (seconds)")
         
         # 2. Score vs Runtime scatter
-        colors_map = {algo: '#FF6B6B' if algo in self.greedy_algos else '#4ECDC4' 
+        colors_map = {algo: '#FF6B6B' if algo in self.greedy_algos else None
                      for algo in self.df["algorithm"].unique()}
         
         for algo in self.df["algorithm"].unique():
@@ -390,7 +457,7 @@ class ComprehensiveAnalyzer:
         axes[0, 1].legend(fontsize=8)
         axes[0, 1].grid(alpha=0.3)
         
-        # 3. Efficiency (score per second)
+        # 3. Efficiency
         if "score_per_sec" not in self.df.columns:
             self.df["score_per_sec"] = self.df["score"] / self.df["runtime"]
         
@@ -400,7 +467,7 @@ class ComprehensiveAnalyzer:
         axes[1, 0].tick_params(axis='x', rotation=45)
         axes[1, 0].set_ylabel("Score / Second")
         
-        # 4. Runtime vs Score trade-off
+        # 4. Runtime-Score trade-off
         summary = self.df.groupby("algorithm").agg({"runtime": "mean", "score": "mean"})
         
         for algo, row in summary.iterrows():
@@ -422,12 +489,11 @@ class ComprehensiveAnalyzer:
         print("✓ Saved runtime_analysis.png")
     
     def plot_convergence_curves(self, max_runs=5):
-        """Convergence curves from convergence history."""
+        """Convergence curves (metaheuristics only)."""
         if "convergence_history" not in self.df.columns:
             print("⚠️  No convergence history available")
             return
         
-        # Only plot metaheuristics (greedy don't have convergence)
         plot_algos = self.meta_algos if self.meta_algos else self.df["algorithm"].unique()
         
         n_algos = len(plot_algos)
@@ -463,8 +529,14 @@ class ComprehensiveAnalyzer:
             ax.set_xlabel("Time (seconds)")
             ax.set_ylabel("Best Score Found")
             ax.grid(True, alpha=0.3)
+            
+            # Add greedy baseline reference if available
+            if self.greedy_algos:
+                best_greedy = self.df[self.df["algorithm"].isin(self.greedy_algos)]["score"].max()
+                ax.axhline(y=best_greedy, color='red', linestyle='--', alpha=0.5, linewidth=1,
+                          label=f'Best Greedy: {best_greedy:.0f}')
+                ax.legend(fontsize=8)
         
-        # Hide unused subplots
         for idx in range(len(plot_algos), len(axes)):
             axes[idx].axis('off')
         
@@ -473,8 +545,21 @@ class ComprehensiveAnalyzer:
         plt.close()
         print("✓ Saved convergence_curves.png")
     
+    def plot_parameter_sensitivity(self):
+        """Parameter sensitivity heatmap."""
+        param_df = self.df.join(pd.json_normalize(self.df["params_dict"]))
+        if len(param_df.columns) > 6:
+            corr = param_df.corr(numeric_only=True)[["score"]].sort_values("score", ascending=False)
+            plt.figure(figsize=(8, 6))
+            sns.heatmap(corr, annot=True, cmap="viridis")
+            plt.title("Parameter Sensitivity")
+            plt.tight_layout()
+            plt.savefig(self.plots_dir / "parameter_sensitivity_heatmap.png", dpi=300)
+            plt.close()
+            print("✓ Saved parameter_sensitivity_heatmap.png")
+    
     def plot_algorithm_ranking(self):
-        """Visual ranking with confidence intervals, highlighting greedy."""
+        """Ranking with confidence intervals, ALL algorithms."""
         fig, ax = plt.subplots(figsize=(12, 8))
         
         summary = self.df.groupby("algorithm")["score"].agg(["mean", "std", "count"])
@@ -482,7 +567,6 @@ class ComprehensiveAnalyzer:
         summary["ci"] = 1.96 * summary["se"]
         summary = summary.sort_values("mean", ascending=True)
         
-        # Colors
         colors = ['#FF6B6B' if algo in self.greedy_algos else '#4ECDC4' 
                  for algo in summary.index]
         
@@ -493,10 +577,9 @@ class ComprehensiveAnalyzer:
         ax.set_yticks(y_pos)
         ax.set_yticklabels(summary.index)
         ax.set_xlabel("Mean Score (with 95% CI)", fontsize=12)
-        ax.set_title("Algorithm Ranking (Red = Greedy Baselines)", fontsize=14, fontweight="bold")
+        ax.set_title("Algorithm Ranking (Red=Greedy, Teal=Metaheuristics)", fontsize=14, fontweight="bold")
         ax.grid(axis='x', alpha=0.3)
         
-        # Add rank numbers
         for i, (algo, row) in enumerate(summary[::-1].iterrows()):
             x_pos = min(summary["mean"]) * 0.95
             ax.text(x_pos, len(summary)-i-1, f"#{i+1}", 
@@ -518,6 +601,18 @@ class ComprehensiveAnalyzer:
         ranking.to_csv(self.dir / "algorithm_ranking.csv", index=False)
         print("✓ Saved algorithm_ranking.csv")
     
+    def save_algorithm_ranking(self):
+        """Save ranking CSV (for backward compatibility)."""
+        summary = self.df.groupby("algorithm")["score"].agg(["mean"]).sort_values("mean", ascending=False)
+        ranking = summary.reset_index()
+        ranking["rank"] = range(1, len(ranking) + 1)
+        ranking.to_csv(self.dir / "algorithm_ranking_simple.csv", index=False)
+        print("✓ Saved algorithm_ranking_simple.csv")
+    
+    def statistical_significance_tests(self):
+        """Alias for backward compatibility."""
+        return self.statistical_tests()
+    
     # ============= MAIN RUNNER =============
     
     def run_full_analysis(self):
@@ -535,9 +630,13 @@ class ComprehensiveAnalyzer:
         print("\nGenerating visualizations...")
         self.plot_score_distribution()
         self.plot_performance_comparison()
+        self.plot_runtime_vs_score()
+        self.plot_efficiency()
         self.plot_runtime_analysis()
         self.plot_convergence_curves()
+        self.plot_parameter_sensitivity()
         self.plot_algorithm_ranking()
+        self.save_algorithm_ranking()
         
         print("\n" + "="*70)
         print("✓ ANALYSIS COMPLETE")

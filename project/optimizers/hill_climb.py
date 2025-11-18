@@ -4,9 +4,9 @@ from optimizers.base_optimizer import BaseOptimizer
 
 class HillClimbing(BaseOptimizer):
     """Hill-Climbing with random restart"""
-    
-    def __init__(self, data, max_iterations=1000, restarts=5, time_limit=60):
-        super().__init__(data, time_limit)
+
+    def __init__(self, data, max_iterations=1000, restarts=5, time_limit=60, use_greedy_init=True):
+        super().__init__(data, time_limit, use_greedy_init)
         self.max_iterations = max_iterations
         self.restarts = restarts
     
@@ -21,8 +21,13 @@ class HillClimbing(BaseOptimizer):
         for restart in range(self.restarts):
             print(f"\nRestart {restart + 1}/{self.restarts}")
             
-            # Random initial solution
-            current = self.random_solution()
+            # Or use a greedy initial solution
+            if self.use_greedy_init:
+                print("  Using greedy initial solution")
+                current = self.get_initial_solution()
+            else:
+                current = self.random_solution()
+
             current_score = self.evaluate(current)
             
             iteration = 0
