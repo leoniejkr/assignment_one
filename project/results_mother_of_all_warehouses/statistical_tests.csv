@@ -1,0 +1,16 @@
+Algorithm 1,Algorithm 2,Mean Diff,t-statistic,p-value (t),p-value (MW),Significant (α=0.05)
+GreedySpatialClustering,GreedyPriorityBased,-963.0,,,1.0,No
+GreedySpatialClustering,HillClimbing,-866.4,,,0.1818,No
+GreedySpatialClustering,SimulatedAnnealing,-881.2,,,0.1818,No
+GreedySpatialClustering,TabuSearch,-1087.4,,,0.1538,No
+GreedySpatialClustering,GeneticAlgorithm,70837.0,,,0.0044,No
+GreedyPriorityBased,HillClimbing,96.6,,,0.1818,No
+GreedyPriorityBased,SimulatedAnnealing,81.8,,,0.1818,No
+GreedyPriorityBased,TabuSearch,-124.4,,,0.1538,No
+GreedyPriorityBased,GeneticAlgorithm,71800.0,,,0.0044,No
+HillClimbing,SimulatedAnnealing,-14.8,-0.5808,0.5694,0.8798,No
+HillClimbing,TabuSearch,-221.0,-7.8459,0.0,0.0002,Yes
+HillClimbing,GeneticAlgorithm,71703.4,3454.3478,0.0,0.0001,Yes
+SimulatedAnnealing,TabuSearch,-206.2,-8.5543,0.0,0.0002,Yes
+SimulatedAnnealing,GeneticAlgorithm,71718.2,4851.7346,0.0,0.0001,Yes
+TabuSearch,GeneticAlgorithm,71924.4,3777.4577,0.0,0.0001,Yes

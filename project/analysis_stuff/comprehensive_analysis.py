@@ -9,7 +9,7 @@ import ast
 class ComprehensiveAnalyzer:
     """Complete analysis for drone delivery optimization experiments."""
     
-    def __init__(self, results_dir="project/results"):
+    def __init__(self, results_dir="results"):
         self.dir = Path(results_dir)
         self.plots_dir = self.dir / "plots"
         self.plots_dir.mkdir(exist_ok=True)
@@ -395,5 +395,5 @@ class ComprehensiveAnalyzer:
 
 
 if __name__ == "__main__":
-    analyzer = ComprehensiveAnalyzer("project/results")
+    analyzer = ComprehensiveAnalyzer("results")
     analyzer.run_full_analysis()

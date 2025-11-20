@@ -1,0 +1,1268 @@
+[
+  {
+    "algorithm": "GreedySpatialClustering",
+    "parameters": {},
+    "run_number": 1,
+    "final_score": 81687,
+    "runtime_seconds": 8.88998031616211,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        81687,
+        8.88998031616211
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 8.88998031616211,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GreedyPriorityBased",
+    "parameters": {},
+    "run_number": 1,
+    "final_score": 89157,
+    "runtime_seconds": 0.24257111549377441,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        89157,
+        0.24257111549377441
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.24257111549377441,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 88718,
+    "runtime_seconds": 67.24761962890625,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88692,
+        22.07998824119568
+      ],
+      [
+        1,
+        88707,
+        43.81404757499695
+      ],
+      [
+        2,
+        88718,
+        66.36144709587097
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 66.36144709587097,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88906,
+    "runtime_seconds": 66.00984597206116,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88879,
+        22.05367136001587
+      ],
+      [
+        1,
+        88895,
+        43.2961847782135
+      ],
+      [
+        2,
+        88906,
+        65.12729716300964
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 65.12729716300964,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88784,
+    "runtime_seconds": 72.83952450752258,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88757,
+        26.574977159500122
+      ],
+      [
+        1,
+        88773,
+        49.89282488822937
+      ],
+      [
+        2,
+        88784,
+        71.97531819343567
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 71.97531819343567,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 88455,
+    "runtime_seconds": 71.67645049095154,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88428,
+        26.349950313568115
+      ],
+      [
+        1,
+        88443,
+        50.05903124809265
+      ],
+      [
+        2,
+        88455,
+        71.46305418014526
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 71.46305418014526,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88472,
+    "runtime_seconds": 71.13211607933044,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88431,
+        21.317060947418213
+      ],
+      [
+        1,
+        88459,
+        47.79898524284363
+      ],
+      [
+        2,
+        88472,
+        70.89466404914856
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 70.89466404914856,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88180,
+    "runtime_seconds": 65.60302352905273,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88127,
+        21.119835138320923
+      ],
+      [
+        1,
+        88159,
+        43.4101927280426
+      ],
+      [
+        2,
+        88180,
+        65.39450669288635
+      ]
+    ],
+    "best_found_at_iteration": 2,
+    "best_found_at_time": 65.39450669288635,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 88628,
+    "runtime_seconds": 63.107441425323486,
+    "iterations": 7,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        40,
+        88530,
+        9.14868426322937
+      ],
+      [
+        41,
+        88566,
+        9.434440612792969
+      ],
+      [
+        43,
+        88595,
+        9.972720384597778
+      ],
+      [
+        45,
+        88598,
+        10.494421005249023
+      ],
+      [
+        46,
+        88614,
+        10.76725721359253
+      ],
+      [
+        60,
+        88627,
+        18.091893196105957
+      ],
+      [
+        61,
+        88628,
+        18.730253219604492
+      ]
+    ],
+    "best_found_at_iteration": 61,
+    "best_found_at_time": 18.730253219604492,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88856,
+    "runtime_seconds": 60.17868256568909,
+    "iterations": 20,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88624,
+        0.4241673946380615
+      ],
+      [
+        1,
+        88625,
+        0.6851832866668701
+      ],
+      [
+        2,
+        88633,
+        0.8947021961212158
+      ],
+      [
+        3,
+        88663,
+        1.0996778011322021
+      ],
+      [
+        4,
+        88666,
+        1.3085212707519531
+      ],
+      [
+        5,
+        88675,
+        1.5389187335968018
+      ],
+      [
+        35,
+        88688,
+        7.825290679931641
+      ],
+      [
+        36,
+        88697,
+        8.031109094619751
+      ],
+      [
+        37,
+        88699,
+        8.23223066329956
+      ],
+      [
+        44,
+        88702,
+        9.707971334457397
+      ],
+      [
+        45,
+        88733,
+        9.912230968475342
+      ],
+      [
+        46,
+        88761,
+        10.113547801971436
+      ],
+      [
+        47,
+        88763,
+        10.325794458389282
+      ],
+      [
+        48,
+        88777,
+        10.563957452774048
+      ],
+      [
+        49,
+        88791,
+        10.770532846450806
+      ],
+      [
+        51,
+        88812,
+        11.181588888168335
+      ],
+      [
+        52,
+        88819,
+        11.418529510498047
+      ],
+      [
+        146,
+        88825,
+        37.721975564956665
+      ],
+      [
+        153,
+        88853,
+        39.14730644226074
+      ],
+      [
+        176,
+        88856,
+        43.98694133758545
+      ]
+    ],
+    "best_found_at_iteration": 176,
+    "best_found_at_time": 43.98694133758545,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88798,
+    "runtime_seconds": 71.41322946548462,
+    "iterations": 7,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88681,
+        0.4126877784729004
+      ],
+      [
+        1,
+        88694,
+        0.6912567615509033
+      ],
+      [
+        4,
+        88726,
+        1.2895119190216064
+      ],
+      [
+        6,
+        88764,
+        1.7300338745117188
+      ],
+      [
+        18,
+        88781,
+        4.230118989944458
+      ],
+      [
+        27,
+        88782,
+        6.158499240875244
+      ],
+      [
+        28,
+        88798,
+        6.364417552947998
+      ]
+    ],
+    "best_found_at_iteration": 28,
+    "best_found_at_time": 6.364417552947998,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 88811,
+    "runtime_seconds": 66.42074799537659,
+    "iterations": 21,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        2,
+        88455,
+        0.9064123630523682
+      ],
+      [
+        3,
+        88458,
+        1.1154546737670898
+      ],
+      [
+        21,
+        88468,
+        6.38690710067749
+      ],
+      [
+        23,
+        88471,
+        7.080764293670654
+      ],
+      [
+        25,
+        88473,
+        7.620728492736816
+      ],
+      [
+        26,
+        88561,
+        7.824017524719238
+      ],
+      [
+        28,
+        88566,
+        8.38424801826477
+      ],
+      [
+        29,
+        88584,
+        8.834597110748291
+      ],
+      [
+        31,
+        88601,
+        9.545889139175415
+      ],
+      [
+        32,
+        88612,
+        9.806291818618774
+      ],
+      [
+        205,
+        88628,
+        56.61759543418884
+      ],
+      [
+        208,
+        88643,
+        57.22259187698364
+      ],
+      [
+        211,
+        88690,
+        57.88969445228577
+      ],
+      [
+        212,
+        88719,
+        58.77605581283569
+      ],
+      [
+        220,
+        88737,
+        61.84397888183594
+      ],
+      [
+        221,
+        88741,
+        62.0493266582489
+      ],
+      [
+        222,
+        88754,
+        62.284812450408936
+      ],
+      [
+        223,
+        88787,
+        62.49046754837036
+      ],
+      [
+        224,
+        88795,
+        62.68974781036377
+      ],
+      [
+        225,
+        88803,
+        62.894245624542236
+      ],
+      [
+        239,
+        88811,
+        66.41940021514893
+      ]
+    ],
+    "best_found_at_iteration": 239,
+    "best_found_at_time": 66.41940021514893,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88711,
+    "runtime_seconds": 64.13723659515381,
+    "iterations": 16,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        2,
+        88560,
+        0.8791463375091553
+      ],
+      [
+        5,
+        88570,
+        1.4853463172912598
+      ],
+      [
+        7,
+        88610,
+        1.9170396327972412
+      ],
+      [
+        8,
+        88613,
+        2.130380868911743
+      ],
+      [
+        9,
+        88619,
+        2.3381807804107666
+      ],
+      [
+        10,
+        88620,
+        2.5804193019866943
+      ],
+      [
+        11,
+        88629,
+        2.781219720840454
+      ],
+      [
+        12,
+        88631,
+        2.9838032722473145
+      ],
+      [
+        15,
+        88635,
+        3.641512393951416
+      ],
+      [
+        16,
+        88640,
+        3.8427391052246094
+      ],
+      [
+        17,
+        88645,
+        4.044203281402588
+      ],
+      [
+        21,
+        88668,
+        4.886224985122681
+      ],
+      [
+        22,
+        88677,
+        5.089656591415405
+      ],
+      [
+        23,
+        88682,
+        5.325524568557739
+      ],
+      [
+        25,
+        88692,
+        5.7486841678619385
+      ],
+      [
+        26,
+        88711,
+        6.02977728843689
+      ]
+    ],
+    "best_found_at_iteration": 26,
+    "best_found_at_time": 6.02977728843689,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88373,
+    "runtime_seconds": 60.18128728866577,
+    "iterations": 14,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        1,
+        88161,
+        0.6731863021850586
+      ],
+      [
+        2,
+        88162,
+        0.8799581527709961
+      ],
+      [
+        3,
+        88170,
+        1.0839908123016357
+      ],
+      [
+        4,
+        88182,
+        1.3170430660247803
+      ],
+      [
+        8,
+        88192,
+        2.1531620025634766
+      ],
+      [
+        12,
+        88196,
+        2.954516649246216
+      ],
+      [
+        85,
+        88203,
+        18.736450672149658
+      ],
+      [
+        93,
+        88235,
+        20.42752480506897
+      ],
+      [
+        94,
+        88313,
+        20.662608861923218
+      ],
+      [
+        98,
+        88342,
+        21.465326070785522
+      ],
+      [
+        100,
+        88344,
+        21.89602541923523
+      ],
+      [
+        101,
+        88353,
+        22.099510431289673
+      ],
+      [
+        105,
+        88371,
+        22.92515254020691
+      ],
+      [
+        161,
+        88373,
+        35.07529878616333
+      ]
+    ],
+    "best_found_at_iteration": 161,
+    "best_found_at_time": 35.07529878616333,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 88696,
+    "runtime_seconds": 63.74556064605713,
+    "iterations": 6,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88454,
+        10.70117473602295
+      ],
+      [
+        1,
+        88501,
+        21.151936769485474
+      ],
+      [
+        2,
+        88556,
+        31.98390293121338
+      ],
+      [
+        3,
+        88603,
+        42.46175146102905
+      ],
+      [
+        4,
+        88634,
+        52.89390158653259
+      ],
+      [
+        5,
+        88696,
+        63.74220585823059
+      ]
+    ],
+    "best_found_at_iteration": 5,
+    "best_found_at_time": 63.74220585823059,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88895,
+    "runtime_seconds": 66.07832455635071,
+    "iterations": 6,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88664,
+        11.89020562171936
+      ],
+      [
+        1,
+        88713,
+        22.842358827590942
+      ],
+      [
+        2,
+        88777,
+        33.82862687110901
+      ],
+      [
+        3,
+        88828,
+        44.55248188972473
+      ],
+      [
+        4,
+        88861,
+        55.03373074531555
+      ],
+      [
+        5,
+        88895,
+        66.07689166069031
+      ]
+    ],
+    "best_found_at_iteration": 5,
+    "best_found_at_time": 66.07689166069031,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88888,
+    "runtime_seconds": 64.8360071182251,
+    "iterations": 4,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88688,
+        11.517042875289917
+      ],
+      [
+        1,
+        88732,
+        28.048917770385742
+      ],
+      [
+        2,
+        88831,
+        46.50632977485657
+      ],
+      [
+        3,
+        88888,
+        64.83257150650024
+      ]
+    ],
+    "best_found_at_iteration": 3,
+    "best_found_at_time": 64.83257150650024,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 89189,
+    "runtime_seconds": 64.81999707221985,
+    "iterations": 9,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88855,
+        11.090120792388916
+      ],
+      [
+        1,
+        88908,
+        17.614327907562256
+      ],
+      [
+        2,
+        88939,
+        25.22324514389038
+      ],
+      [
+        3,
+        88974,
+        32.223615407943726
+      ],
+      [
+        4,
+        89064,
+        38.907262325286865
+      ],
+      [
+        5,
+        89080,
+        45.29795026779175
+      ],
+      [
+        6,
+        89118,
+        51.64045262336731
+      ],
+      [
+        7,
+        89174,
+        58.00173330307007
+      ],
+      [
+        8,
+        89189,
+        64.81890916824341
+      ]
+    ],
+    "best_found_at_iteration": 8,
+    "best_found_at_time": 64.81890916824341,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 88928,
+    "runtime_seconds": 63.039745569229126,
+    "iterations": 9,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88487,
+        6.593322515487671
+      ],
+      [
+        1,
+        88567,
+        14.367740869522095
+      ],
+      [
+        2,
+        88670,
+        22.330949783325195
+      ],
+      [
+        3,
+        88709,
+        30.697366952896118
+      ],
+      [
+        4,
+        88744,
+        37.282240867614746
+      ],
+      [
+        5,
+        88807,
+        43.73726987838745
+      ],
+      [
+        6,
+        88878,
+        50.191001653671265
+      ],
+      [
+        7,
+        88901,
+        56.628201723098755
+      ],
+      [
+        8,
+        88928,
+        63.038464307785034
+      ]
+    ],
+    "best_found_at_iteration": 8,
+    "best_found_at_time": 63.038464307785034,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 88639,
+    "runtime_seconds": 60.83001232147217,
+    "iterations": 7,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        88396,
+        6.827806234359741
+      ],
+      [
+        1,
+        88431,
+        13.256091117858887
+      ],
+      [
+        2,
+        88493,
+        21.125812768936157
+      ],
+      [
+        3,
+        88525,
+        28.22108268737793
+      ],
+      [
+        4,
+        88550,
+        36.11428689956665
+      ],
+      [
+        5,
+        88594,
+        47.43680667877197
+      ],
+      [
+        6,
+        88639,
+        60.82828712463379
+      ]
+    ],
+    "best_found_at_iteration": 6,
+    "best_found_at_time": 60.82828712463379,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 0,
+    "runtime_seconds": 0.0005910396575927734,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0005910396575927734,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 0,
+    "runtime_seconds": 0.0004267692565917969,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0004267692565917969,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 0,
+    "runtime_seconds": 0.00030112266540527344,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.00030112266540527344,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 0,
+    "runtime_seconds": 0.00023221969604492188,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.00023221969604492188,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 0,
+    "runtime_seconds": 0.00021505355834960938,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.00021505355834960938,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 0,
+    "runtime_seconds": 0.0002110004425048828,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0002110004425048828,
+    "orders_completed": null,
+    "completion_rate": null
+  }
+]

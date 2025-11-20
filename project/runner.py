@@ -278,10 +278,10 @@ if __name__ == "__main__":
     from file_handling import load_input
     
     # Load data
-    data = load_input("project/data/input/busy_day.in")
+    data = load_input("data/input/busy_day.in")
     
     # Create runner
-    runner = ExperimentRunner(data, output_dir="project/results")
+    runner = ExperimentRunner(data, output_dir="results")
     
     # Run all experiments (including greedy baselines)
     runner.run_all(

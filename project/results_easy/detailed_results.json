@@ -1,0 +1,1153 @@
+[
+  {
+    "algorithm": "GreedySpatialClustering",
+    "parameters": {},
+    "run_number": 1,
+    "final_score": 372,
+    "runtime_seconds": 0.005116701126098633,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        372,
+        0.005116701126098633
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.005116701126098633,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GreedyPriorityBased",
+    "parameters": {},
+    "run_number": 1,
+    "final_score": 369,
+    "runtime_seconds": 0.0003414154052734375,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        369,
+        0.0003414154052734375
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0003414154052734375,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 0.026751279830932617,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.0016906261444091797
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0016906261444091797,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 0.02271270751953125,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.0022034645080566406
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0022034645080566406,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 0.022377967834472656,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.003984689712524414
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.003984689712524414,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 0.028919458389282227,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.0030889511108398438
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0030889511108398438,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 250,
+      "restarts": 5,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 0.020674705505371094,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.005568504333496094
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.005568504333496094,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 0.004735469818115234,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.0016827583312988281
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0016827583312988281,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 0.008953332901000977,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.002169370651245117
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.002169370651245117,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 0.009599924087524414,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.00746464729309082
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.00746464729309082,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 0.007810354232788086,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.0018596649169921875
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0018596649169921875,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "HillClimbing",
+    "parameters": {
+      "max_iterations": 500,
+      "restarts": 2,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 0.009350299835205078,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.001890420913696289
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.001890420913696289,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 1.7240369319915771,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        10,
+        372,
+        0.0033435821533203125
+      ],
+      [
+        35,
+        376,
+        0.0075337886810302734
+      ]
+    ],
+    "best_found_at_iteration": 35,
+    "best_found_at_time": 0.0075337886810302734,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 1.6998651027679443,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        4,
+        372,
+        0.00510096549987793
+      ],
+      [
+        29,
+        376,
+        0.009905815124511719
+      ]
+    ],
+    "best_found_at_iteration": 29,
+    "best_found_at_time": 0.009905815124511719,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 1.6909880638122559,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        9,
+        365,
+        0.005258798599243164
+      ],
+      [
+        10,
+        369,
+        0.005609035491943359
+      ],
+      [
+        14,
+        376,
+        0.006308317184448242
+      ]
+    ],
+    "best_found_at_iteration": 14,
+    "best_found_at_time": 0.006308317184448242,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 1.8328449726104736,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        372,
+        0.0005657672882080078
+      ],
+      [
+        6,
+        376,
+        0.002047300338745117
+      ]
+    ],
+    "best_found_at_iteration": 6,
+    "best_found_at_time": 0.002047300338745117,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 10000,
+      "cooling_rate": 0.95,
+      "iterations_per_temp": 50,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 2.762265682220459,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        3,
+        369,
+        0.0014193058013916016
+      ],
+      [
+        6,
+        376,
+        0.0020487308502197266
+      ]
+    ],
+    "best_found_at_iteration": 6,
+    "best_found_at_time": 0.0020487308502197266,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 4.972952842712402,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        2,
+        372,
+        0.000911712646484375
+      ],
+      [
+        28,
+        376,
+        0.0065860748291015625
+      ]
+    ],
+    "best_found_at_iteration": 28,
+    "best_found_at_time": 0.0065860748291015625,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 3.132967233657837,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        3,
+        365,
+        0.0011589527130126953
+      ],
+      [
+        9,
+        369,
+        0.002926349639892578
+      ],
+      [
+        10,
+        376,
+        0.003252267837524414
+      ]
+    ],
+    "best_found_at_iteration": 10,
+    "best_found_at_time": 0.003252267837524414,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 3.0513246059417725,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        13,
+        376,
+        0.003498554229736328
+      ]
+    ],
+    "best_found_at_iteration": 13,
+    "best_found_at_time": 0.003498554229736328,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 3.064929246902466,
+    "iterations": 3,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        14,
+        365,
+        0.0027832984924316406
+      ],
+      [
+        19,
+        372,
+        0.0036864280700683594
+      ],
+      [
+        31,
+        376,
+        0.009216547012329102
+      ]
+    ],
+    "best_found_at_iteration": 31,
+    "best_found_at_time": 0.009216547012329102,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "parameters": {
+      "initial_temp": 5000,
+      "cooling_rate": 0.98,
+      "iterations_per_temp": 40,
+      "min_temp": 1,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 3.046506881713867,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        1,
+        376,
+        0.0005774497985839844
+      ]
+    ],
+    "best_found_at_iteration": 1,
+    "best_found_at_time": 0.0005774497985839844,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 44.911001682281494,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.011098623275756836
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.011098623275756836,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 60.01940703392029,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        372,
+        0.00946044921875
+      ],
+      [
+        1,
+        376,
+        0.01943373680114746
+      ]
+    ],
+    "best_found_at_iteration": 1,
+    "best_found_at_time": 0.01943373680114746,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 60.00758337974548,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.021794795989990234
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.021794795989990234,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 46.702656507492065,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.00959467887878418
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.00959467887878418,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 20,
+      "max_iterations": 5000,
+      "neighborhood_size": 50,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 44.85420751571655,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.01019740104675293
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.01019740104675293,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376,
+    "runtime_seconds": 30.5292809009552,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.006156444549560547
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.006156444549560547,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376,
+    "runtime_seconds": 29.90656805038452,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.005351543426513672
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.005351543426513672,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376,
+    "runtime_seconds": 27.425384044647217,
+    "iterations": 2,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        365,
+        0.005169868469238281
+      ],
+      [
+        1,
+        376,
+        0.015032768249511719
+      ]
+    ],
+    "best_found_at_iteration": 1,
+    "best_found_at_time": 0.015032768249511719,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376,
+    "runtime_seconds": 39.35962152481079,
+    "iterations": 0,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 39.35962152481079,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "TabuSearch",
+    "parameters": {
+      "tabu_tenure": 50,
+      "max_iterations": 5000,
+      "neighborhood_size": 30,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376,
+    "runtime_seconds": 26.68472146987915,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376,
+        0.006764888763427734
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.006764888763427734,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376.0,
+    "runtime_seconds": 1.150951623916626,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.021225929260253906
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.021225929260253906,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376.0,
+    "runtime_seconds": 1.3902735710144043,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.013833999633789062
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.013833999633789062,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376.0,
+    "runtime_seconds": 1.3344895839691162,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.025615215301513672
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.025615215301513672,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376.0,
+    "runtime_seconds": 2.2198851108551025,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.014885902404785156
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.014885902404785156,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.2,
+      "crossover_rate": 0.8,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376.0,
+    "runtime_seconds": 1.8004732131958008,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.020131349563598633
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.020131349563598633,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 1,
+    "final_score": 376.0,
+    "runtime_seconds": 1.9693856239318848,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.06664466857910156
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.06664466857910156,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 2,
+    "final_score": 376.0,
+    "runtime_seconds": 1.4637019634246826,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.04898405075073242
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.04898405075073242,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 3,
+    "final_score": 376.0,
+    "runtime_seconds": 1.4928092956542969,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.026953458786010742
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.026953458786010742,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 4,
+    "final_score": 376.0,
+    "runtime_seconds": 1.7532620429992676,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.0380253791809082
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.0380253791809082,
+    "orders_completed": null,
+    "completion_rate": null
+  },
+  {
+    "algorithm": "GeneticAlgorithm",
+    "parameters": {
+      "population_size": 100,
+      "generations": 50,
+      "mutation_rate": 0.15,
+      "crossover_rate": 0.9,
+      "time_limit": 60
+    },
+    "run_number": 5,
+    "final_score": 376.0,
+    "runtime_seconds": 1.9127802848815918,
+    "iterations": 1,
+    "num_evaluations": 0,
+    "evals_per_second": 0.0,
+    "convergence_history": [
+      [
+        0,
+        376.0,
+        0.04138374328613281
+      ]
+    ],
+    "best_found_at_iteration": 0,
+    "best_found_at_time": 0.04138374328613281,
+    "orders_completed": null,
+    "completion_rate": null
+  }
+]

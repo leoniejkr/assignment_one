@@ -23,7 +23,7 @@ def main():
     from file_handling import load_input
     
     # Change this to your input file
-    input_file = "project/data/input/busy_day.in"
+    input_file = "data/input/busy_day.in"
     
     if not Path(input_file).exists():
         print(f"ERROR: Input file not found: {input_file}")
@@ -51,7 +51,7 @@ def main():
         original_experiments = configs.define_experiments
         configs.define_experiments = define_experiments_quick_test
         
-        runner = ExperimentRunner(data, output_dir="project/results/quick_test")
+        runner = ExperimentRunner(data, output_dir="results/quick_test")
         runner.run_all(num_runs=3, include_greedy=True)
         
         # Restore original
@@ -79,7 +79,7 @@ def main():
     
     from runner import ExperimentRunner
     
-    runner = ExperimentRunner(data, output_dir="project/results")
+    runner = ExperimentRunner(data, output_dir="results")
     runner.run_all(num_runs=num_runs, include_greedy=True)
     
     print("\n✓ All experiments complete!")
@@ -92,7 +92,7 @@ def main():
     
     from analysis_stuff.comprehensive_analysis import ComprehensiveAnalyzer
     
-    analyzer = ComprehensiveAnalyzer("project/results")
+    analyzer = ComprehensiveAnalyzer("results")
     analyzer.run_full_analysis()
     
     # ============= STEP 5: Summary =============
@@ -127,7 +127,7 @@ def main():
     print("="*80 + "\n")
 
 
-def print_quick_stats(results_dir="project/results"):
+def print_quick_stats(results_dir="results"):
     """Print quick statistics from existing results."""
     import pandas as pd
     from pathlib import Path
@@ -179,8 +179,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Drone Delivery Optimization Workflow")
     parser.add_argument("--stats-only", action="store_true", 
                        help="Only print statistics from existing results")
-    parser.add_argument("--results-dir", default="project/results",
-                       help="Results directory (default: project/results)")
+    parser.add_argument("--results-dir", default="results",
+                       help="Results directory (default: results)")
     
     args = parser.parse_args()
     

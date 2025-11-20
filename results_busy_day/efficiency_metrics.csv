@@ -1,0 +1,9 @@
+,score_per_sec,score_per_sec,score_per_iter,score_per_iter
+,mean,std,mean,std
+algorithm,,,,
+GeneticAlgorithm,0.0,0.0,,
+GreedyPriorityBased,367549.94,,89157.0,
+GreedySpatialClustering,9188.66,,81687.0,
+HillClimbing,1284.51,58.58,29528.61,88.7
+SimulatedAnnealing,1385.51,87.24,7645.88,3966.82
+TabuSearch,1391.91,38.67,14045.67,4568.4
